@@ -1,0 +1,72 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Modular Card Example\"\n",
+        "format: html\n",
+        "cards:\n",
+        "  - src: \"https://via.placeholder.com/150\"\n",
+        "    title: \"Card Title 1\"\n",
+        "    text: \"This is card 1 text.\"\n",
+        "    url: \"https://example.com\"\n",
+        "    link_text: \"Learn More\"\n",
+        "    img_alt: \"Placeholder Image\"\n",
+        "  \n",
+        "  - src: \"https://via.placeholder.com/150\"\n",
+        "    title: \"Card Title 2\"\n",
+        "    text: \"This is card 2 text.\"\n",
+        "    url: \"https://example.com\"\n",
+        "    link_text: \"Discover More\"\n",
+        "    img_alt: \"Placeholder Image\"\n",
+        "  \n",
+        "  - src: \"https://via.placeholder.com/150\"\n",
+        "    title: \"Card Title 3\"\n",
+        "    text: \"This is card 3 text.\"\n",
+        "    url: \"https://example.com\"\n",
+        "    link_text: \"Explore Now\"\n",
+        "    img_alt: \"Placeholder Image\"\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "## Responsive Card Grid Example\n",
+        "\n",
+        "\n",
+        "\n",
+        "```{html}\n",
+        "<div class=\"container\">\n",
+        "  <div class=\"row\">\n",
+        "    <!-- Loop through the cards -->\n",
+        "    {for card in cards}\n",
+        "      <div class=\"col-md-6 col-xl-4 mb-4\">\n",
+        "        <div class=\"card\" style=\"width: 18rem;\">\n",
+        "          <img src=\"{card.src}\" class=\"card-img-top\" alt=\"{card.img_alt}\">\n",
+        "          <div class=\"card-body\">\n",
+        "            <h5 class=\"card-title\">{card.title}</h5>\n",
+        "            <p class=\"card-text\">{card.text}</p>\n",
+        "            <a href=\"{card.url}\" class=\"btn btn-primary\">{card.link_text}</a>\n",
+        "          </div>\n",
+        "        </div>\n",
+        "      </div>\n",
+        "    {/for}\n",
+        "  </div>\n",
+        "</div>\n",
+        "```"
+      ],
+      "id": "b084d55b"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

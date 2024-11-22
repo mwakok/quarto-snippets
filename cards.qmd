@@ -1,0 +1,57 @@
+---
+format: html
+---
+
+
+
+::: {.grid}
+```{ojs}
+//| echo: false
+// Define the add_card function using standard Bootstrap syntax
+function add_card(src, title, text, url, link_text, img_alt) {
+  return html`
+      <div class="card" style="width: 18rem;">
+        <img src="${src}" class="card-img-top" alt="${img_alt}">
+        <div class="card-body">
+          <h5 class="card-title">${title}</h5>
+          <p class="card-text">${text}</p>
+          <a href="${url}" class="btn btn-primary">${link_text}</a>
+        </div>
+      </div>
+    </div>`;
+}
+
+// Create multiple cards using the standard syntax
+html`<div class="container">
+  <div class="g-col-6 g-col-md-4">
+    ${[
+      add_card(
+        "https://via.placeholder.com/150", 
+        "Card Title 1", 
+        "This is card 1 text.", 
+        "https://example.com", 
+        "Learn More", 
+        "Placeholder Image"
+      ),
+      add_card(
+        "https://via.placeholder.com/150", 
+        "Card Title 2", 
+        "This is card 2 text.", 
+        "https://example.com", 
+        "Discover More", 
+        "Placeholder Image"
+      ),
+      add_card(
+        "https://via.placeholder.com/150", 
+        "Card Title 3", 
+        "This is card 3 text.", 
+        "https://example.com", 
+        "Explore Now", 
+        "Placeholder Image"
+      )
+    ]}
+  </div>
+</div>`;
+```
+
+:::

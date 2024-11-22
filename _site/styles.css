@@ -1,0 +1,11 @@
+.g-col-6 {
+    display: flex
+}
+
+.card-deck {
+    display: flex;
+}
+
+.card-group {
+    display: flex;
+}

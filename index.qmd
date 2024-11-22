@@ -1,0 +1,97 @@
+---
+title: "Card Example"
+format: html
+page-layout: full
+---
+
+## Card example in Observable JavaScript
+
+```{ojs}
+//| echo: false
+function add_card(src, title, text, url, link_text, img_alt) {
+  return html`<div class="g-col-12 g-col-md-6 g-col-xl-4">
+    <div class="card h-100">
+      <a href="${url}">
+        <img src="${src}" alt="${img_alt}" class="card-img-top">
+      </a>
+      <div class="card-body">
+        <h2 class="card-title">${title}</h2>
+        <p class="card-text">${text}</p>
+      </div>
+      <div class="card-footer">
+        <a href="${url}" class="btn btn-primary">${link_text}</a>
+      </div>
+    </div>
+  </div>`;
+}
+```
+
+::: {.grid}
+
+```{ojs}
+//| echo: false
+add_card(
+  "https://via.placeholder.com/150", 
+  "Card Title", 
+  "This is an example card text.", 
+  "https://example.com", 
+  "Learn More", 
+  "Placeholder Image"
+);
+
+add_card(
+  "https://via.placeholder.com/150", 
+  "Card Title", 
+  "This is an example card text.", 
+  "https://example.com", 
+  "Learn More", 
+  "Placeholder Image"
+);
+
+add_card(
+  "https://via.placeholder.com/150", 
+  "Card Title", 
+  "This is an example card text.", 
+  "https://example.com", 
+  "Learn More", 
+  "Placeholder Image"
+);
+
+add_card(
+  "https://via.placeholder.com/150", 
+  "Card Title", 
+  "This is an example card text.", 
+  "https://example.com", 
+  "Learn More", 
+  "Placeholder Image"
+);
+
+add_card(
+  "https://via.placeholder.com/150", 
+  "Card Title", 
+  "This is an example card text.", 
+  "https://example.com", 
+  "Learn More", 
+  "Placeholder Image"
+);
+
+add_card(
+  "https://via.placeholder.com/150", 
+  "Card Title", 
+  "This is an example card text.", 
+  "https://example.com", 
+  "Learn More", 
+  "Placeholder Image"
+);
+
+add_card(
+  "https://via.placeholder.com/150", 
+  "Card Title", 
+  "This is an example card text.", 
+  "https://example.com", 
+  "Learn More", 
+  "Placeholder Image"
+);
+
+```
+:::
